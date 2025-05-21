@@ -16,3 +16,4 @@ AI
     - [4주차 WIL](./hh_ai_WIL/4week-WIL.md)
     - [5주차 WIL](./hh_ai_WIL/5week-WIL.md)
     - [6주차 WIL](./hh_ai_WIL/6week-WIL.md)
+    - [7주차 WIL](./hh_ai_WIL/7week-WIL.md)
