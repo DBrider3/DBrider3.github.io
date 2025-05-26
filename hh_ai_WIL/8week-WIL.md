@@ -7,7 +7,9 @@ title: 8주차 WIL
 
 ### 0\. 들어가며
 
-벌써 항해 플러스 AI 과정 8주차네. 진짜 시간 순삭이다. 이번 주는 _“모델을 더 빠르게, 더 가볍게, 더 싸게”_ 만드는 네 가지 키워드를 집중적으로 파봤어.
+벌써 항해 플러스 AI 과정 8주차. 진짜 시간 순삭이다.
+
+이번 주는 “모델을 더 빠르게, 더 가볍게, 더 싸게” 만드는 네 가지 키워드를 집중적으로 파봤다.
 
 1.  **FlashAttention** – 긴 입력도 쌩으로 돌려서 속도 3배 뽑기
 2.  **Data Parallelism & DeepSpeed** – GPU 여러 대를 네트워크로 엮어 학습 속도 뻥튀기
@@ -20,13 +22,13 @@ title: 8주차 WIL
 
 ### 1\. FlashAttention 
 
-Transformer Self‑Attention은 Q·K·V 행렬 계산 때문에 **O(n²)** 메모리/연산량이 터지지. FlashAttention은
+Transformer Self‑Attention은 Q·K·V 행렬 계산 때문에 **O(n²)** 메모리/연산량이 터짐. FlashAttention은
 
 -   Q/K/V를 **block**(예: 64×64) 단위로 잘라서
 -   GPU **SRAM**에 올린 뒤, 블록별 softmax를 스트리밍 방식으로 계산
 -   결과를 다시 HBM으로 쓰는 방식으로
 
-HBM 왕복을 최소화해. 실제로 4K 토큰 → 16K 토큰으로 늘려도 **VRAM 사용량이 거의 평평**했고, wandb 로그 보니까 **throughput 3.2×** 찍혔어.
+HBM 왕복을 최소화해. 실제로 4K 토큰 → 16K 토큰으로 늘려도 **VRAM 사용량이 거의 평평**했고, wandb 로그 보니까 **throughput 3.2×** 찍혔다.
 
 ```
 model = AutoModelForCausalLM.from_pretrained(
@@ -123,4 +125,7 @@ model = get_peft_model(base_model, peft_cfg)
 프로젝트 발표도 했는데, 발표자료를 전날 급하게 만드느라 3시간 밖에 못잤는데 생각보다 발표를 잘해서 뿌듯했다.
 
 많이 성장하는 8주간의 여졍이였다. 앞으로 이러한 이해를 바탕으로 더 크게 성장할 거라 믿는다.
+
+
+#항해99 #항해플러스AI후기 #개발자커뮤니티 #LLM
 
