@@ -18,3 +18,4 @@ AI
     - [6주차 WIL](./hh_ai_WIL/6week-WIL.md)
     - [7주차 WIL](./hh_ai_WIL/7week-WIL.md)
     - [8주차 WIL](./hh_ai_WIL/8week-WIL.md)
+    - [항해 플러스 AI 코스 3기 과정 교육 후기](./hh_ai_WIL/review.md)
